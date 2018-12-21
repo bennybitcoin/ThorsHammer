@@ -14,21 +14,8 @@
 
 pragma solidity ^0.4.23;
 
-contract TRC20Interface {
-    function totalSupply() public constant returns (uint);
-    function balanceOf(address tokenOwner) public constant returns (uint balance);
-    function allowance(address tokenOwner, address spender) public constant returns (uint remaining);
-    function transfer(address to, uint tokens) public returns (bool success);
-    function approve(address spender, uint tokens) public returns (bool success);
-    function transferFrom(address from, address to, uint tokens) public returns (bool success);
 
-    event Transfer(address indexed from, address indexed to, uint tokens);
-    event Approval(address indexed tokenOwner, address indexed spender, uint tokens);
-
-}
-
-
-contract Roulette {
+contract TronSpin {
 
     /************************************/
     //      Variable Declarations       //
@@ -46,7 +33,7 @@ contract Roulette {
 
     uint8 public wheelResult;
     //the enum BetType contains the different types of possible bets
-    enum BetType{number, color, dozen, parity, column}
+    enum BetType{number, color, dozen, column, parity}
     struct Gamble
     {
       address player; //Contains the address for the user currently playing the game
@@ -74,7 +61,7 @@ contract Roulette {
     //*******************************************************//
 
     //initialization settings
-    function  TronSpin() private //creation settings
+    constructor () internal //creation settings
     {
         developer = msg.sender;
         blockDelay=1; //indicates which block after bet will be used for RNG

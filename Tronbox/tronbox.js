@@ -43,7 +43,7 @@ module.exports = {
       network_id: "*"
     },
     shasta: {
-      privateKey: process.env.PK,
+      privateKey: '65c73e4c5b3ffe8bb1b31d7a50a6d58f7f852fb61885517d93bb1b7ed91c5c40',
       consume_user_resource_percent: 30,
       fee_limit: 100000000,
 
