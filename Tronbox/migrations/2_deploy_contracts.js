@@ -1,5 +1,4 @@
-var MyContract = artifacts.require("./TronSpin.sol");
-module.exports = function(deployer)
-{
+var MyContract = artifacts.require("./TronWheel.sol");
+module.exports = function(deployer) {
     deployer.deploy(MyContract);
 };
